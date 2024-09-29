@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>final-2</title>
+
+    
+    <style>
+      /* Global Styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+      }
+
+      /* Sidebar Styles */
+      .sidebar {
+        position: absolute; ;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: auto;
+        background-color: #0097a7;
+        padding: 20px;
+        /* border-radius: 10px; */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .sidebar-content {
+        padding: 20px;
+      }
+
+      .sidebar h2 {
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      .sidebar p {
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      .profile-photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 20px auto;
+      }
+
+      .progress-chart {
+        margin-top: 20px;
+      }
+
+      .bar-container {
+        margin-bottom: 10px;
+      }
+
+      .bar {
+        height: 10px;
+        border-radius: 5px;
+        background-color: #f7dc6f;
+        width: 100%;
+      }
+
+      .bar-container span {
+        display: block;
+        margin-bottom: 5px;
+        color: #fff;
+      }
+
+      /* Main Content Styles */
+      .main-content {
+        position: top;
+        margin-left: 250px;
+        padding: 20px;
+      }
+
+      .header {
+        /* background-image: linear-gradient(to bottom, #0097A7, #F7DC6F); */
+        /* padding: 20px; */
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+        color: #fff;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .header img {
+        width: 73%;
+        height: 317px;
+        /* object-fit: cover; */
+        border-radius: 10px;
+      }
+
+      .portfolio-section {
+        margin-top: 20px;
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+      }
+
+      .portfolio-item {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .portfolio-item img { 
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+      }
+
+      .portfolio-item h3 {
+        margin-top: 10px;
+        color: #333;
+      }
+
+      .portfolio-item p {
+        margin-top: 10px;
+        color: #666;
+      }
+      .port{ 
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    color:rgb(41, 41, 74);
+    }
+    .addist{
+      position:absolute; top:180vh; right: 0vh;
+     cursor: pointer;
+    }
+    /* .addist{
+      position:fixed; top:90vh; right: 0vh;
+     cursor: pointer;
+    } */
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .sidebar {
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+
+        .main-content {
+          margin-left: 0;
+        }
+
+        .portfolio-grid {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    &nbsp;
+    <div class="sidebar">
+      <div class="sidebar-content">
+        <img src="https://ik.imagekit.io/fb8a8hbvn/src/RESUME/dp%201.png?updatedAt=1727496638424" alt="Profile Photo" class="profile-photo" />
+        <h2>John Doe</h2>
+        <p>Web and Mobile Application Developer</p>
+        <p>Toronto, Canada</p>
+        <p>Age: 30</p>
+        <div class="progress-chart">
+          <div class="bar-container">
+            <span>HTML</span>
+            <div
+              class="bar"
+              style="width: 80%; background-color: #f7dc6f"
+            ></div>
+          </div>
+          <div class="bar-container">
+            <span>CSS</span>
+            <div
+              class="bar"
+              style="width: 60%; background-color: #f7dc6f"
+            ></div>
+          </div>
+          <div class="bar-container">
+            <span>JavaScript</span>
+            <div
+              class="bar"
+              style="width: 90%; background-color: #f7dc6f"
+            ></div>
+          </div>
+          <div class="bar-container">
+            <span>PHP</span>
+            <div
+              class="bar"
+              style="width: 70%; background-color: #f7dc6f"
+            ></div>
+          </div>
+          <div class="bar-container">
+            <span>WordPress</span>
+            <div
+              class="bar"
+              style="width: 50%; background-color: #f7dc6f"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header">
+        <img src="https://ik.imagekit.io/fb8a8hbvn/src/RESUME/resume-temp.png?updatedAt=1727496641108" alt="Mountain Landscape" />
+      </div>
+
+      <!-- Portfolio Section -->
+
+      <div class="port"><h1>My Portfolio</h1></div>
+
+      <div class="portfolio-section">
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <img src="https://ik.imagekit.io/fb8a8hbvn/src/RESUME/certi1.png?updatedAt=1727496638405"  height="25px"  alt="Certificate 1" />
+            <h3>Certificate 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="portfolio-item">
+            <img src="https://ik.imagekit.io/fb8a8hbvn/src/RESUME/certi2.png?updatedAt=1727496638426" alt="Certificate 2" />
+            <h3>Certificate 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="portfolio-item">
+            <img src="https://ik.imagekit.io/fb8a8hbvn/src/RESUME/certi3.png?updatedAt=1727496638421" alt="Certificate 3" />
+            <h3>Certificate 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="portfolio-item">
+            <img src="https://ik.imagekit.io/fb8a8hbvn/src/RESUME/certi4.png?updatedAt=1727496638413" alt="Certificate 4" />
+            <h3>Certificate 4</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+   <!-- assistant -->
+    <div class="addist">
+        <img src="https://ik.imagekit.io/fb8a8hbvn/src/RESUME/assist.png?updatedAt=1727496637988" alt="bot">
+    </div>
+    <br>
+    &nbsp;
+    <html></html>
+<head>
+ <title>
+  Mock Test and Skill Tester
+ </title>
+ <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/> -->
+ <style>
+  body {
+           margin: 0;
+           font-family: Arial, sans-serif;
+           background-color: #f5f5f5;
+       }
+       .container {
+           display: flex;
+       }
+       .sidebar2 {
+           width: 20%;
+           background-color: #f4a261;
+           padding: 20px;
+           box-sizing: border-box;
+       }
+       .sidebar2 img {
+           width: 100px;
+           height: 100px;
+           border-radius: 50%;
+       }
+       .sidebar2 h2 {
+           font-size: 20px;
+           margin: 10px 0;
+       }
+       .profile-score, .leader-board {
+           margin: 20px 0;
+       }
+       .profile-score .chart, .leader-board .chart {
+           width: 100%;
+           height: 150px;
+           background-color: #2a9d8f;
+           border-radius: 10px;
+       }
+       .leader-board .chart {
+           height: 100px;
+           display: flex;
+           justify-content: space-around;
+           align-items: flex-end;
+       }
+       .leader-board .chart div {
+           width: 20%;
+           background-color: #264653;
+           height: 50%;
+       }
+       .main-content {
+           width: 80%;
+           padding: 20px;
+           box-sizing: border-box;
+       }
+       .search-bar {
+           display: flex;
+           align-items: center;
+           margin-bottom: 20px;
+       }
+       .search-bar input {
+           width: 80%;
+           padding: 10px;
+           border-radius: 20px;
+           border: none;
+           outline: none;
+           font-size: 16px;
+       }
+       .search-bar i {
+           margin-left: 10px;
+           font-size: 20px;
+           color: #264653;
+       }
+       .search-bar .icons {
+           margin-left: auto;
+           display: flex;
+           align-items: center;
+       }
+       .search-bar .icons i {
+           margin-left: 20px;
+           font-size: 20px;
+           color: #264653;
+       }
+       .section-title {
+           font-size: 24px;
+           margin: 20px 0;
+       }
+       .cards {
+           display: flex;
+           flex-wrap: wrap;
+           gap: 20px;
+       }
+       .card {
+           width: 22%;
+           background-color: #e9c46a;
+           border-radius: 10px;
+           padding: 20px;
+           box-sizing: border-box;
+           text-align: center;
+       }
+       .card img {
+           width: 80px;
+           height: 80px;
+       }
+       .card h3 {
+           font-size: 18px;
+           margin: 10px 0;
+       }
+       .card button {
+           background-color: #2a9d8f;
+           color: white;
+           border: none;
+           padding: 10px 20px;
+           border-radius: 20px;
+           cursor: pointer;
+       }
+ </style>
+</head>
+<body>
+ <div class="container">
+  <div class="sidebar2">
+   <img alt="Profile picture of Artur Carter" height="100" src="https://ik.imagekit.io/fb8a8hbvn/src/Desktop-3/dp%201.png?updatedAt=1727496652393 width="100"/>
+   <h2>
+    Artur Carter
+   </h2>
+   <div class="profile-score">
+    <h3>
+     Profile Score :
+    </h3>
+    <div class="chart">
+     <img alt="Pie chart showing profile score" height="150" src="https://ik.imagekit.io/fb8a8hbvn/src/Desktop-3/Pie.png?updatedAt=1727496654372" width="150"/>
+    </div>
+   </div>
+   <div class="leader-board">
+    <h3>
+     Leader Board:
+    </h3>
+    <div class="chart">
+     <div style="height: 60%;">
+     </div>
+     <div style="height: 80%;">
+     </div>
+     <div style="height: 40%;">
+     </div>
+     <div style="height: 70%;">
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="main-content">
+   <div class="search-bar">
+    <input placeholder="search" type="text"/>
+    <i class="fas fa-search">
+    </i>
+    <div class="icons">
+     <i class="fas fa-bell">
+     </i>
+     <i class="fas fa-fire">
+     </i>
+    </div>
+   </div>
+   <div class="section-title">
+    Mock Test
+   </div>
+   <div class="cards">
+    <div class="card">
+     <img alt="HTML logo" height="80" src="https://ik.imagekit.io/fb8a8hbvn/src/Desktop-3/html.png?updatedAt=1727496653125" width="80"/>
+     <h3>
+      HTML
+     </h3>
+     <button>
+      start now
+     </button>
+    </div>
+    <div class="card">
+     <img alt="CSS logo" height="80" src="https://ik.imagekit.io/fb8a8hbvn/src/Desktop-3/css.png?updatedAt=1727496652329" width="80"/>
+     <h3>
+      CSS
+     </h3>
+     <button>
+      start now
+     </button>
+    </div>
+    <div class="card">
+     <img alt="JavaScript logo" height="80" src="https://ik.imagekit.io/fb8a8hbvn/src/Desktop-3/js.png?updatedAt=1727496653795" width="80"/>
+     <h3>
+      Java script
+     </h3>
+     <button>
+      start now
+     </button>
+    </div>
+    <div class="card">
+     <img alt="PHP logo" height="80" src="https://ik.imagekit.io/fb8a8hbvn/src/Desktop-3/php.png?updatedAt=1727496653808" width="80"/>
+     <h3>
+      PHP
+     </h3>
+     <button>
+      start now
+     </button>
+    </div>
+   </div>
+   <div class="section-title">
+    SKILL TESTER
+   </div>
+   <div class="cards">
+    <div class="card">
+     <img alt="UI/UX logo" height="80" src="https://ik.imagekit.io/fb8a8hbvn/src/Desktop-3/figma.png?updatedAt=1727496653096" width="80"/>
+     <h3>
+      UI/UX
+     </h3>
+     <button>
+      start now
+     </button>
+    </div>
+    <div class="card">
+     <img alt="React logo" height="80" src="https://ik.imagekit.io/fb8a8hbvn/src/Desktop-3/react%20js.png?updatedAt=1727496654655" width="80"/>
+     <h3>
+      React
+     </h3>
+     <button>
+      start now
+     </button>
+    </div>
+    <div class="card">
+     <img alt="Node.js logo" height="80" src="https://ik.imagekit.io/fb8a8hbvn/src/Desktop-3/node%20js.png?updatedAt=1727496653711 " width="80"/>
+     <h3>
+      Node js
+     </h3>
+     <button>
+      start now
+     </button>
+    </div>
+    <div class="card">
+     <img alt="PHP logo" height="80" src="https://ik.imagekit.io/fb8a8hbvn/src/Desktop-3/php.png?updatedAt=1727496653808" width="80"/>
+     <h3>
+      PHP
+     </h3>
+     <button>
+      start now
+     </button>
+    </div>
+   </div>
+  </div>
+ </div>
+</body>
+</html>
+  </body>
+</html>
